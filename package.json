@@ -5,7 +5,7 @@
   "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && chmod +x dist/cli.js",
+    "build": "tsc && chmod +x dist/cli.js && cp package.json dist/",
     "start": "./dist/cli.js",
     "start:dev": "npm run build && npm start",
     "pub": "npm publish --access public",
