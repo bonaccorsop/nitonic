@@ -2,13 +2,15 @@
   "name": "nitonic",
   "version": "1.0.0",
   "description": "Fatturare forfettariamente in modo smart",
-  "main": "index.js",
+  "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "tsc && npm run includeSql && node dist/index.js",
-    "start": "node dist/index.js",
+    "build": "tsc && npm run includeSql && chmod +x dist/cli.js",
+    "start": "./dist/cli.js",
+    "start:dev": "npm run build && npm start",
     "includeSql": "rm -rf dist/src/database/migrations && cp -r src/database/migrations dist/src/database"
   },
+  "bin": "./dist/cli.js",
   "author": "Pietro Bonaccorso",
   "license": "ISC",
   "devDependencies": {
