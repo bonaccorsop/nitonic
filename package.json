@@ -1,6 +1,6 @@
 {
   "name": "@gitonic/nitonic",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fatturare forfettariamente in modo smart",
   "main": "cli.js",
   "scripts": {
