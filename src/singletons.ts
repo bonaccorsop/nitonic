@@ -1,4 +1,3 @@
-import { Db } from './database/db';
 import { Filesystem as FS } from './filesystem/filesystem';
 
 FS.init('.nitonic');
@@ -12,7 +11,7 @@ import { CredentialsService as CS } from './services/credentials.service';
 import { SyncService } from './services/sync.service';
 
 export const credentialsService = new CS();
-export const db = new Db();
+export const db = 'test';
 
 export const teamSystem = new TeamSystem(credentialsService);
 export const ageDocumentService = new AgeDocumentService(teamSystem);

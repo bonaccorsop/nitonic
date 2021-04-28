@@ -1,8 +1,4 @@
-import { Db } from '../database/db';
 import { TeamSystem } from '../providers/teamsystem';
-import { db } from '../singletons';
-import { groupBy, forEach, maxBy } from 'lodash';
-import { TSCustomer, TSDocument } from '../interfaces/teamsystem.interface';
 
 import * as xmlParser from 'fast-xml-parser';
 import * as he from 'he';

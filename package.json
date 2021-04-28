@@ -1,14 +1,14 @@
 {
-  "name": "nitonic",
-  "version": "1.0.0",
+  "name": "@gitonic/nitonic",
+  "version": "1.0.2",
   "description": "Fatturare forfettariamente in modo smart",
   "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run includeSql && chmod +x dist/cli.js",
+    "build": "tsc && chmod +x dist/cli.js",
     "start": "./dist/cli.js",
     "start:dev": "npm run build && npm start",
-    "includeSql": "rm -rf dist/src/database/migrations && cp -r src/database/migrations dist/src/database"
+    "publish": "npm run build && npm publish --access public"
   },
   "bin": "./dist/cli.js",
   "author": "Pietro Bonaccorso",
@@ -20,7 +20,6 @@
     "@types/inquirer": "^7.3.1",
     "@types/lodash": "^4.14.168",
     "@types/ora": "^3.2.0",
-    "lodash": "^4.17.21",
     "prettier": "2.2.1",
     "tslint": "^6.1.3",
     "typescript": "^4.2.4"
@@ -32,11 +31,10 @@
     "commander": "^7.2.0",
     "fast-xml-parser": "^3.19.0",
     "he": "^1.2.0",
+    "lodash": "^4.17.21",
     "inquirer": "^8.0.0",
     "moment": "^2.29.1",
     "ora": "^5.4.0",
-    "slugify": "^1.5.0",
-    "sqlite": "^4.0.21",
-    "sqlite3": "^5.0.2"
+    "slugify": "^1.5.0"
   }
 }

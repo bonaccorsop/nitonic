@@ -1,4 +1,3 @@
-import { Db } from '../database/db';
 import { TeamSystem } from '../providers/teamsystem';
 import { db } from '../singletons';
 import { groupBy, forEach, sortBy, isEmpty, maxBy } from 'lodash';
@@ -14,15 +13,15 @@ export class DocumentCreatorHelperService {
   private cachedDocuments: AGEDocument[] = [];
 
   constructor(
-    private db: Db,
+    private db: string,
     private teamSystem: TeamSystem,
     private ageDocumentService: AgeDocumentService,
   ) {}
 
-  async create(c: TSCustomer): Promise<void> {
-    const query = `INSERT INTO clienti (ragioneSociale, partitaIva, indirizzo, civico, cap, comune, provincia, paese ) VALUES ("${c.ragSociale}", "${c.partitaIva}" ,"${c.indirizzo}" ,"${c.civico}" ,"${c.cap}" ,"${c.comune}" ,"${c.provincia}", "${c.paese}")`;
-    await db.exec(query);
-  }
+  // async create(c: TSCustomer): Promise<void> {
+  //   const query = `INSERT INTO clienti (ragioneSociale, partitaIva, indirizzo, civico, cap, comune, provincia, paese ) VALUES ("${c.ragSociale}", "${c.partitaIva}" ,"${c.indirizzo}" ,"${c.civico}" ,"${c.cap}" ,"${c.comune}" ,"${c.provincia}", "${c.paese}")`;
+  //   await db.exec(query);
+  // }
 
   async getDocuments(): Promise<AGEDocument[]> {
     if (!isEmpty(this.cachedDocuments)) {

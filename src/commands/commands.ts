@@ -87,8 +87,6 @@ export const bootstrap = async () => {
   );
 
   // Init and migrate db
-  await db.init(FS.resolveFilePath('nitonic.db'));
-  await db.migrate();
 };
 
 export const syncCommand = async (args, opt, log) => {
@@ -101,20 +99,6 @@ export const syncCommand = async (args, opt, log) => {
     {
       loading: 'Sincronizzazione dei contatti in rubrica',
       success: 'Sincronizzazione effettuata',
-    },
-  );
-};
-
-export const contactCreateCommand = async (args, opt, log) => {
-  await bootstrap();
-
-  const data: TSCustomer = (await createContactForm()) as any;
-  await loading(
-    async () => {
-      await docCreatorHelperService.create(data);
-    },
-    {
-      success: 'Contatto Salvato con successo',
     },
   );
 };
