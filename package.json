@@ -8,7 +8,8 @@
     "build": "tsc && chmod +x dist/cli.js",
     "start": "./dist/cli.js",
     "start:dev": "npm run build && npm start",
-    "publish": "npm run build && npm publish --access public"
+    "pub": "npm publish --access public",
+    "patch:publish": "npm run build && npm run pub"
   },
   "bin": "./dist/cli.js",
   "author": "Pietro Bonaccorso",
