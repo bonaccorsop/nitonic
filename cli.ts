@@ -5,8 +5,7 @@ import { readFileSync } from 'fs';
 import { createFatturaCommand, syncCommand, testCommand } from './src/commands/commands';
 
 const program = new Command();
-
-const pack = JSON.parse(readFileSync('./package.json', 'utf-8'));
+const pack = JSON.parse(readFileSync(__dirname + '/package.json', 'utf-8'));
 
 program.version(pack.version);
 
