@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
+import { readFileSync } from 'fs';
 import { createFatturaCommand, syncCommand, testCommand } from './src/commands/commands';
 
 const program = new Command();
 
-program.version('1.0.0');
+const pack = JSON.parse(readFileSync('./package.json', 'utf-8'));
+
+program.version(pack.version);
 
 program.command('sync').description('Scarica tutte le fatture').action(syncCommand);
 
