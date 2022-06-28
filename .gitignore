@@ -1,0 +1,5 @@
+*example*.pdf
+*example*.xml
+
+node_modules/
+dist

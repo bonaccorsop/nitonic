@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns3:FatturaElettronica versione="FPR12"
+  xmlns:ns2="http://www.w3.org/2000/09/xmldsig#"
+  xmlns:ns3="http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2">
+  <FatturaElettronicaHeader>
+    <DatiTrasmissione>
+      <IdTrasmittente>
+        <IdPaese>IT</IdPaese>
+        <IdCodice>*****</IdCodice>
+      </IdTrasmittente>
+      <ProgressivoInvio>4d34178c47</ProgressivoInvio>
+      <FormatoTrasmissione>FPR12</FormatoTrasmissione>
+      <CodiceDestinatario>URSWIEX</CodiceDestinatario>
+      <ContattiTrasmittente>
+        <Telefono>0874-60561</Telefono>
+      </ContattiTrasmittente>
+    </DatiTrasmissione>
+    <CedentePrestatore>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>06774820820</IdCodice>
+        </IdFiscaleIVA>
+        <CodiceFiscale>BNCPTR88B04G273V</CodiceFiscale>
+        <Anagrafica>
+          <Denominazione>BONACCORSO PIETRO</Denominazione>
+        </Anagrafica>
+        <RegimeFiscale>RF19</RegimeFiscale>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>VIA PONENTE</Indirizzo>
+        <CAP>90044</CAP>
+        <Comune>CARINI</Comune>
+        <Provincia>PA</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+      <IscrizioneREA>
+        <Ufficio>PA</Ufficio>
+        <NumeroREA>PA</NumeroREA>
+        <StatoLiquidazione>LN</StatoLiquidazione>
+      </IscrizioneREA>
+    </CedentePrestatore>
+    <CessionarioCommittente>
+      <DatiAnagrafici>
+        <IdFiscaleIVA>
+          <IdPaese>IT</IdPaese>
+          <IdCodice>10037720967</IdCodice>
+        </IdFiscaleIVA>
+        <Anagrafica>
+          <Denominazione>HAYS SOLUTIONS S.R.L.</Denominazione>
+        </Anagrafica>
+      </DatiAnagrafici>
+      <Sede>
+        <Indirizzo>Corso Italia</Indirizzo>
+        <CAP>20122</CAP>
+        <Comune>Milano</Comune>
+        <Provincia>MI</Provincia>
+        <Nazione>IT</Nazione>
+      </Sede>
+    </CessionarioCommittente>
+  </FatturaElettronicaHeader>
+  <FatturaElettronicaBody>
+    <DatiGenerali>
+      <DatiGeneraliDocumento>
+        <TipoDocumento>TD01</TipoDocumento>
+        <Divisa>EUR</Divisa>
+        <Data>2022-01-28</Data>
+        <Numero>2</Numero>
+        <DatiBollo>
+          <BolloVirtuale>SI</BolloVirtuale>
+          <ImportoBollo>2.00</ImportoBollo>
+        </DatiBollo>
+        <ImportoTotaleDocumento>5700.00</ImportoTotaleDocumento>
+        <Causale>DITTA IN REGIME CONTABILE FORFETTARIO L. 190/2014 - ART. 1 C. 54/89</Causale>
+      </DatiGeneraliDocumento>
+    </DatiGenerali>
+    <DatiBeniServizi>
+      <DettaglioLinee>
+        <NumeroLinea>1</NumeroLinea>
+        <Descrizione>CONSULENZA SOFTWARE EFFETTUATO PER VS CONTO NEL PERIODO DAL 01/01 AL 31/01/2022 (19 GIORNI EFFETTIVI)</Descrizione>
+        <Quantita>1.00</Quantita>
+        <PrezzoUnitario>5700.00</PrezzoUnitario>
+        <PrezzoTotale>5700.00</PrezzoTotale>
+        <AliquotaIVA>0.00</AliquotaIVA>
+        <Natura>N2.2</Natura>
+      </DettaglioLinee>
+      <DatiRiepilogo>
+        <AliquotaIVA>0.00</AliquotaIVA>
+        <Natura>N2.2</Natura>
+        <Arrotondamento>0.00</Arrotondamento>
+        <ImponibileImporto>5700.00</ImponibileImporto>
+        <Imposta>0.00</Imposta>
+        <RiferimentoNormativo>Operazione ai sensi dell'art. 1 commi da 54 a 89 della Legge n 190-2014 - Regime forfetario</RiferimentoNormativo>
+      </DatiRiepilogo>
+    </DatiBeniServizi>
+    <DatiPagamento>
+      <CondizioniPagamento>TP02</CondizioniPagamento>
+      <DettaglioPagamento>
+        <Beneficiario>BONACCORSO PIETRO</Beneficiario>
+        <ModalitaPagamento>MP05</ModalitaPagamento>
+        <DataRiferimentoTerminiPagamento>2022-02-12</DataRiferimentoTerminiPagamento>
+        <ImportoPagamento>5700.00</ImportoPagamento>
+        <IstitutoFinanziario>BANCA INTESA SAN PAOLO</IstitutoFinanziario>
+        <IBAN>IT84O0306904632100000000120</IBAN>
+        <ABI>03069</ABI>
+        <CAB>04632</CAB>
+      </DettaglioPagamento>
+    </DatiPagamento>
+  </FatturaElettronicaBody>
+</ns3:FatturaElettronica>

@@ -1,0 +1,18 @@
+{
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/*.d.ts": true,
+        "**/*js": true,
+        "**/CVS": true
+    },
+    "editor.tabSize": 2,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#ff00ff"
+        },
+    ]
+}
