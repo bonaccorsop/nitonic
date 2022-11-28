@@ -1,4 +1,4 @@
-import { forEach, groupBy, isNull, mapKeys, mapValues } from 'lodash';
+import _, { forEach, groupBy, isNull, mapKeys, mapValues } from 'lodash';
 import ora from 'ora';
 import * as inquirer from 'inquirer';
 import chalk from 'chalk';
@@ -15,6 +15,7 @@ import {
   ageDocumentService,
   docCreatorHelperService,
   credentialsService,
+  statusService,
   db,
   syncService,
   teamSystem,
@@ -101,6 +102,22 @@ export const syncCommand = async (args, opt) => {
       success: 'Sincronizzazione effettuata',
     },
   );
+};
+
+export const statusCommand = async (args, opt) => {
+  await bootstrap();
+
+  await loading(
+    async () => {
+      const aggregate = await statusService.execute(2022);
+      log(aggregate)
+    },
+    {
+      loading: 'Caricamento delle fatture dell\'anno',
+      // success: 'Sincronizzazione effettuata',
+    },
+  );
+
 };
 
 export const contactListCommand = async (args, opt) => {

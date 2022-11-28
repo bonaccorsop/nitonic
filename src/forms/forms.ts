@@ -298,20 +298,28 @@ export const compileFatturaForm = async (
       default: moment().add(15, 'day').format('YYYY-MM-DD'),
       choices: [
         {
-          name: `5 Giorni`,
-          value: moment().add(5, 'day').format('YYYY-MM-DD'),
-        },
-        {
-          name: `10 Giorni`,
-          value: moment().add(10, 'day').format('YYYY-MM-DD'),
+          name: `30 Giorni`,
+          value: moment().add(30, 'day').format('YYYY-MM-DD'),
         },
         {
           name: `15 Giorni`,
           value: moment().add(15, 'day').format('YYYY-MM-DD'),
         },
         {
-          name: `30 Giorni`,
-          value: moment().add(30, 'day').format('YYYY-MM-DD'),
+          name: `10 Giorni`,
+          value: moment().add(10, 'day').format('YYYY-MM-DD'),
+        },
+        {
+          name: `5 Giorni`,
+          value: moment().add(5, 'day').format('YYYY-MM-DD'),
+        },
+        {
+          name: `45 Giorni`,
+          value: moment().add(45, 'day').format('YYYY-MM-DD'),
+        },
+        {
+          name: `60 Giorni`,
+          value: moment().add(60, 'day').format('YYYY-MM-DD'),
         },
       ],
     },
