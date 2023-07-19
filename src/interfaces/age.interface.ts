@@ -16,7 +16,7 @@ export interface CessionarioCommittente {
   Sede: {
     Indirizzo: string;
     NumeroCivico: string;
-    CAP: string;
+    CAP: number;
     Comune: string;
     Provincia: string;
     Nazione: string;

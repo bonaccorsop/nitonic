@@ -32,7 +32,7 @@ export const renderAgeXML = (doc: AGEDocument): string => `
       </DatiAnagrafici>
       <Sede>
         <Indirizzo>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo}</Indirizzo>
-        <CAP>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP}</CAP>
+        <CAP>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP.toString().padStart(5, '0')}</CAP>
         <Comune>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune}</Comune>
         <Provincia>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.Provincia}</Provincia>
         <Nazione>${doc.FatturaElettronicaHeader.CedentePrestatore.Sede.Nazione}</Nazione>
@@ -55,7 +55,7 @@ export const renderAgeXML = (doc: AGEDocument): string => `
       </DatiAnagrafici>
       <Sede>
         <Indirizzo>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo}</Indirizzo>
-        <CAP>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP}</CAP>
+        <CAP>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP.toString().padStart(5, '0')}</CAP>
         <Comune>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune}</Comune>
         <Provincia>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.Provincia}</Provincia>
         <Nazione>${doc.FatturaElettronicaHeader.CessionarioCommittente.Sede.Nazione}</Nazione>
